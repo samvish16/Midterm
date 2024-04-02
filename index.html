@@ -98,49 +98,49 @@
                 text: "You find yourself at the bustling intersection of MG Road and Brigade Road, the heart of Bangalore's shopping district.",
                 choices: ["Explore the shops", "Head towards Cubbon Park"],
                 consequences: ["exploreShops", "visitCubbonPark"],
-                images: ["shoppingDistrict.jpg", "cubbonPark.jpg"]
+                image: "shoppingDistrict.jpg"
             },
             exploreShops: {
                 text: "You delve into the labyrinth of shops, filled with colorful garments, handicrafts, and aromatic spices.",
                 choices: ["Browse for traditional attire", "Indulge in street food"],
                 consequences: ["browseAttire", "tryStreetFood"],
-                images: ["traditionalAttire.jpg", "streetFood.jpg"]
+                image: "shoppingDistrict.jpg"
             },
             visitCubbonPark: {
                 text: "As you enter Cubbon Park, you're greeted by lush greenery, tranquil lakes, and the chirping of birds.",
                 choices: ["Stroll along the tree-lined paths", "Visit the iconic Lalbagh Botanical Garden"],
                 consequences: ["walkInThePark", "exploreLalbagh"],
-                images: ["cubbonPark2.jpg", "lalbagh.jpg"]
+                image: "cubbonPark.jpg"
             },
             browseAttire: {
                 text: "You discover a treasure trove of silk sarees and intricately embroidered garments, each telling a story of Bangalore's cultural heritage.",
                 choices: ["Purchase a silk saree", "Explore more shops"],
                 consequences: ["buySaree", "continueShopping"],
-                images: ["silkSaree.jpg", "moreShopping.jpg"]
+                image: "traditionalAttire.jpg"
             },
             tryStreetFood: {
                 text: "You feast on piping hot dosas, crispy vadas, and delectable chaats, savoring the flavors of Bangalore's street cuisine.",
                 choices: ["Try a refreshing glass of sugarcane juice", "Continue your culinary adventure"],
                 consequences: ["sugarcaneJuice", "exploreMoreFood"],
-                images: ["sugarcaneJuice.jpg", "foodMarket.jpg"]
+                image: "streetFood.jpg"
             },
             walkInThePark: {
                 text: "You wander through the park's shaded pathways, admiring the towering trees, vibrant flower beds, and tranquil fountains.",
                 choices: ["Relax by the lotus pond", "Visit the nearby Bangalore Palace"],
                 consequences: ["pondRelaxation", "explorePalace"],
-                images: ["lotusPond.jpg", "palace.jpg"]
+                image: "cubbonPark2.jpg"
             },
             exploreLalbagh: {
                 text: "You marvel at the diverse flora and fauna of Lalbagh, with its sprawling lawns, majestic trees, and colorful flower beds.",
                 choices: ["Take a guided tour", "Picnic by the lake"],
                 consequences: ["guidedTour", "picnicLake"],
-                images: ["botanicalGarden.jpg", "picnicSpot.jpg"]
+                image: "lalbagh.jpg"
             },
             buySaree: {
                 text: "You select a stunning silk saree, adorned with intricate patterns and vibrant colors, a perfect memento of your Bangalore adventure.",
                 choices: ["Head back to your hotel", "Continue exploring Bangalore"],
                 consequences: ["returnHotel", "exploreMore"],
-                images: ["sareePurchase.jpg", "cityExploration.jpg"]
+                image: "silkSaree.jpg"
             }
         };
 
@@ -166,7 +166,7 @@
             });
 
             const storyImage = document.getElementById("storyImage");
-            storyImage.src = stage.images[Math.floor(Math.random() * stage.images.length)];
+            storyImage.src = stage.image;
         }
 
         function makeChoice(index) {
@@ -184,7 +184,7 @@
 
             document.getElementById("choices").innerHTML = "";
 
-            document.getElementById("storyImage").src = stage.images[0];
+            document.getElementById("storyImage").src = stage.image;
         }
 
         // Initialize the game
