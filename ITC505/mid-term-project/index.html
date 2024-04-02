@@ -170,7 +170,8 @@
         }
 
         function makeChoice(index) {
-            currentState = story[currentState].consequences[index];
+            const stage = story[currentState];
+            currentState = stage.consequences[index];
             updatePage();
 
             if (currentState.startsWith("ending")) {
