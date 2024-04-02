@@ -37,15 +37,10 @@
             margin: 20px;
         }
 
-        #startButton,
         #restartButton {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
         }
 
         footer {
@@ -62,8 +57,7 @@
     <header>
         <h1>Adventure in Bangalore</h1>
     </header>
-    <button id="startButton" onclick="startGame()">Start</button>
-    <button id="restartButton" onclick="restartGame()" style="display: none;">Restart</button>
+    <button id="restartButton" onclick="startGame()">Restart</button>
     <div id="story"></div>
     <div id="choices"></div>
     <img id="storyImage" />
@@ -155,14 +149,7 @@
         function startGame() {
             currentState = "start";
             updatePage();
-            document.getElementById("startButton").style.display = "none";
-            document.getElementById("restartButton").style.display = "inline-block";
             document.body.style.backgroundImage = 'none';
-        }
-
-        function restartGame() {
-            currentState = "start";
-            updatePage();
         }
 
         function updatePage() {
