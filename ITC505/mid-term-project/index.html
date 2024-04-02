@@ -57,7 +57,7 @@
     <header>
         <h1>Adventure in Bangalore</h1>
     </header>
-    <button id="restartButton" onclick="startGame()">Start</button>
+    <button id="restartButton" onclick="startGame()">Restart</button>
     <div id="story"></div>
     <div id="choices"></div>
     <img id="storyImage" />
@@ -170,8 +170,7 @@
         }
 
         function makeChoice(index) {
-            const stage = story[currentState];
-            currentState = stage.consequences[index];
+            currentState = story[currentState].consequences[index];
             updatePage();
 
             if (currentState.startsWith("ending")) {
